@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f7f5">
+  <meta name="color-scheme" content="light">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>СпецТех Аренда</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="catalog-screen" class="screen active" aria-label="Каталог"></section>
+    <section id="detail-screen" class="screen" aria-label="Карточка техники"></section>
+    <section id="cart-screen" class="screen" aria-label="Корзина и оформление"></section>
+    <section id="orders-screen" class="screen" aria-label="Мои заказы"></section>
+    <section id="owner-screen" class="screen" aria-label="Кабинет владельца"></section>
+  </main>
+  <nav class="bottom-nav" aria-label="Основная навигация">
+    <button class="nav-button active" data-screen="catalog" aria-label="Каталог">▦<small>Каталог</small></button>
+    <button class="nav-button" data-screen="cart" aria-label="Корзина">＋<small>Корзина</small><i id="cart-count"></i></button>
+    <button class="nav-button" data-screen="orders" aria-label="Мои заказы">▤<small>Мои заказы</small></button>
+    <button class="nav-button" data-screen="owner" aria-label="Владелец">◉<small>Владелец</small></button>
+  </nav>
+  <button class="ai-button" id="ai-chat" aria-label="Открыть AI-консультанта">AI-консультант</button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="debug-overflow" aria-live="polite"></div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
